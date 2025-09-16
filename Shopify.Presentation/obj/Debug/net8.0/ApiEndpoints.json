@@ -1,5 +1,15 @@
 [
   {
+    "ContainingType": "Shopify.Presentation.Controllers.HealthController",
+    "Method": "Get",
+    "RelativePath": "Health",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Shopify.Presentation.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

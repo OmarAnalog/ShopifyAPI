@@ -1,0 +1,12 @@
+C:\Users\EG\source\repos\Shopify\Shopify.Domain\bin\Debug\net8.0\Shopify.Domain.deps.json
+C:\Users\EG\source\repos\Shopify\Shopify.Domain\bin\Debug\net8.0\Shopify.Domain.dll
+C:\Users\EG\source\repos\Shopify\Shopify.Domain\bin\Debug\net8.0\Shopify.Domain.pdb
+C:\Users\EG\source\repos\Shopify\Shopify.Domain\obj\Debug\net8.0\Shopify.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\EG\source\repos\Shopify\Shopify.Domain\obj\Debug\net8.0\Shopify.Domain.AssemblyInfoInputs.cache
+C:\Users\EG\source\repos\Shopify\Shopify.Domain\obj\Debug\net8.0\Shopify.Domain.AssemblyInfo.cs
+C:\Users\EG\source\repos\Shopify\Shopify.Domain\obj\Debug\net8.0\Shopify.Domain.csproj.CoreCompileInputs.cache
+C:\Users\EG\source\repos\Shopify\Shopify.Domain\obj\Debug\net8.0\Shopify.Domain.sourcelink.json
+C:\Users\EG\source\repos\Shopify\Shopify.Domain\obj\Debug\net8.0\Shopify.Domain.dll
+C:\Users\EG\source\repos\Shopify\Shopify.Domain\obj\Debug\net8.0\refint\Shopify.Domain.dll
+C:\Users\EG\source\repos\Shopify\Shopify.Domain\obj\Debug\net8.0\Shopify.Domain.pdb
+C:\Users\EG\source\repos\Shopify\Shopify.Domain\obj\Debug\net8.0\ref\Shopify.Domain.dll

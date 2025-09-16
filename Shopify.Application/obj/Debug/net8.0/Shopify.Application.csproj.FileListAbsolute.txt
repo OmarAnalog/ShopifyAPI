@@ -1,0 +1,16 @@
+C:\Users\EG\source\repos\Shopify\Shopify.Application\bin\Debug\net8.0\Shopify.Application.deps.json
+C:\Users\EG\source\repos\Shopify\Shopify.Application\bin\Debug\net8.0\Shopify.Application.dll
+C:\Users\EG\source\repos\Shopify\Shopify.Application\bin\Debug\net8.0\Shopify.Application.pdb
+C:\Users\EG\source\repos\Shopify\Shopify.Application\bin\Debug\net8.0\Shopify.Domain.dll
+C:\Users\EG\source\repos\Shopify\Shopify.Application\bin\Debug\net8.0\Shopify.Domain.pdb
+C:\Users\EG\source\repos\Shopify\Shopify.Application\obj\Debug\net8.0\Shopify.Application.csproj.AssemblyReference.cache
+C:\Users\EG\source\repos\Shopify\Shopify.Application\obj\Debug\net8.0\Shopify.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\EG\source\repos\Shopify\Shopify.Application\obj\Debug\net8.0\Shopify.Application.AssemblyInfoInputs.cache
+C:\Users\EG\source\repos\Shopify\Shopify.Application\obj\Debug\net8.0\Shopify.Application.AssemblyInfo.cs
+C:\Users\EG\source\repos\Shopify\Shopify.Application\obj\Debug\net8.0\Shopify.Application.csproj.CoreCompileInputs.cache
+C:\Users\EG\source\repos\Shopify\Shopify.Application\obj\Debug\net8.0\Shopify.Application.sourcelink.json
+C:\Users\EG\source\repos\Shopify\Shopify.Application\obj\Debug\net8.0\Shopify..22AEDA05.Up2Date
+C:\Users\EG\source\repos\Shopify\Shopify.Application\obj\Debug\net8.0\Shopify.Application.dll
+C:\Users\EG\source\repos\Shopify\Shopify.Application\obj\Debug\net8.0\refint\Shopify.Application.dll
+C:\Users\EG\source\repos\Shopify\Shopify.Application\obj\Debug\net8.0\Shopify.Application.pdb
+C:\Users\EG\source\repos\Shopify\Shopify.Application\obj\Debug\net8.0\ref\Shopify.Application.dll

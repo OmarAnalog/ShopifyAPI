@@ -10,4 +10,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Shopify.Application\Shopify.Application.csproj" />
+    <ProjectReference Include="..\Shopify.Infrastructure\Shopify.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

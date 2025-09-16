@@ -1,0 +1,29 @@
+
+# --- Stage 1: runtime base ---
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+WORKDIR /app
+EXPOSE 80
+
+# --- Stage 2: build (uses SDK image) ---
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+
+# Copy csproj files only (layer caching for nuget restore)
+COPY ["Shopify.Presentation/Shopify.Presentation.csproj", "Shopify.Presentation/"]
+COPY ["Shopify.Application/Shopify.Application.csproj", "Shopify.Application/"]
+COPY ["Shopify.Infrastructure/Shopify.Infrastructure.csproj", "Shopify.Infrastructure/"]
+COPY ["Shopify.Domain/Shopify.Domain.csproj", "Shopify.Domain/"]
+
+# Restore dependencies for the presentation project
+RUN dotnet restore "Shopify.Presentation/Shopify.Presentation.csproj"
+
+# Copy everything and publish
+COPY . .
+WORKDIR "/src/Shopify.Presentation"
+RUN dotnet publish "Shopify.Presentation.csproj" -c Release -o /app/publish /p:UseAppHost=false
+
+# --- Stage 3: final image (small runtime only) ---
+FROM base AS final
+WORKDIR /app
+COPY --from=build /app/publish .
+ENTRYPOINT ["dotnet", "Shopify.Presentation.dll"]

@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Nr0KQKwsy3A=",
+  "dgSpecHash": "6imFmaPezPc=",
   "success": true,
   "projectFilePath": "C:\\Users\\EG\\source\\repos\\Shopify\\Shopify.Tests\\Shopify.Tests.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\EG\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

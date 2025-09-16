@@ -31,3 +31,10 @@ C:\Users\EG\source\repos\Shopify\Shopify.Presentation\obj\Debug\net8.0\refint\Sh
 C:\Users\EG\source\repos\Shopify\Shopify.Presentation\obj\Debug\net8.0\Shopify.Presentation.pdb
 C:\Users\EG\source\repos\Shopify\Shopify.Presentation\obj\Debug\net8.0\Shopify.Presentation.genruntimeconfig.cache
 C:\Users\EG\source\repos\Shopify\Shopify.Presentation\obj\Debug\net8.0\ref\Shopify.Presentation.dll
+C:\Users\EG\source\repos\Shopify\Shopify.Presentation\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\EG\source\repos\Shopify\Shopify.Presentation\bin\Debug\net8.0\Shopify.Application.dll
+C:\Users\EG\source\repos\Shopify\Shopify.Presentation\bin\Debug\net8.0\Shopify.Domain.dll
+C:\Users\EG\source\repos\Shopify\Shopify.Presentation\bin\Debug\net8.0\Shopify.Infrastructure.dll
+C:\Users\EG\source\repos\Shopify\Shopify.Presentation\bin\Debug\net8.0\Shopify.Application.pdb
+C:\Users\EG\source\repos\Shopify\Shopify.Presentation\bin\Debug\net8.0\Shopify.Infrastructure.pdb
+C:\Users\EG\source\repos\Shopify\Shopify.Presentation\bin\Debug\net8.0\Shopify.Domain.pdb

@@ -1,4 +1,7 @@
 
+using Shopify.Application;
+using Shopify.Infrastructure;
+
 namespace Shopify.Presentation
 {
     public class Program
@@ -6,31 +9,35 @@ namespace Shopify.Presentation
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-
-            // Add services to the container.
-
-            builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-            builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
-
-            var app = builder.Build();
-
-            // Configure the HTTP request pipeline.
-            if (app.Environment.IsDevelopment())
             {
-                app.UseSwagger();
-                app.UseSwaggerUI();
+                builder.Services
+                    .AddApplication()
+                    .AddInfrastructure();
+                builder.Services.AddControllers();
+                builder.Services.AddEndpointsApiExplorer();
+                builder.Services.AddSwaggerGen();
             }
 
-            app.UseHttpsRedirection();
 
-            app.UseAuthorization();
+            var app = builder.Build();
+            {
+                // Configure the HTTP request pipeline.
+                if (app.Environment.IsDevelopment())
+                {
+                    app.UseDeveloperExceptionPage();
+                    app.UseSwagger();
+                    app.UseSwaggerUI();
+                }
+
+                app.UseHttpsRedirection();
+                app.UseRouting();
+                app.UseAuthorization();
 
 
-            app.MapControllers();
+                app.MapControllers();
 
-            app.Run();
+                app.Run();
+            }
         }
     }
 }
