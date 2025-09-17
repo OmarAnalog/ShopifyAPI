@@ -16,3 +16,5 @@ C:\Users\EG\source\repos\Shopify\Shopify.Infrastructure\obj\Debug\net8.0\Shopify
 C:\Users\EG\source\repos\Shopify\Shopify.Infrastructure\obj\Debug\net8.0\refint\Shopify.Infrastructure.dll
 C:\Users\EG\source\repos\Shopify\Shopify.Infrastructure\obj\Debug\net8.0\Shopify.Infrastructure.pdb
 C:\Users\EG\source\repos\Shopify\Shopify.Infrastructure\obj\Debug\net8.0\ref\Shopify.Infrastructure.dll
+C:\Users\EG\source\repos\Shopify\Shopify.Infrastructure\bin\Debug\net8.0\Shopify.Infrastructure.runtimeconfig.json
+C:\Users\EG\source\repos\Shopify\Shopify.Infrastructure\obj\Debug\net8.0\Shopify.Infrastructure.genruntimeconfig.cache

@@ -12,7 +12,7 @@ namespace Shopify.Presentation
             {
                 builder.Services
                     .AddApplication()
-                    .AddInfrastructure();
+                    .AddInfrastructure(builder.Configuration);
                 builder.Services.AddControllers();
                 builder.Services.AddEndpointsApiExplorer();
                 builder.Services.AddSwaggerGen();

@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\EG\\source\\repos\\Shopify\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{93F8F677-17AE-4AEA-8624-ACBFB98F1A06}|Shopify.Presentation\\Shopify.Presentation.csproj|c:\\users\\eg\\source\\repos\\shopify\\shopify.presentation\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93F8F677-17AE-4AEA-8624-ACBFB98F1A06}|Shopify.Presentation\\Shopify.Presentation.csproj|solutionrelative:shopify.presentation\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{93F8F677-17AE-4AEA-8624-ACBFB98F1A06}|Shopify.Presentation\\Shopify.Presentation.csproj|c:\\users\\eg\\source\\repos\\shopify\\shopify.presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{93F8F677-17AE-4AEA-8624-ACBFB98F1A06}|Shopify.Presentation\\Shopify.Presentation.csproj|solutionrelative:shopify.presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -39,14 +43,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\EG\\source\\repos\\Shopify\\Shopify.Presentation\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "Shopify.Presentation\\Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\EG\\source\\repos\\Shopify\\Shopify.Presentation\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "Shopify.Presentation\\Controllers\\ProductsController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBMAAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T20:40:33.455Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\EG\\source\\repos\\Shopify\\Shopify.Presentation\\Program.cs",
               "RelativeDocumentMoniker": "Shopify.Presentation\\Program.cs",
               "ToolTip": "C:\\Users\\EG\\source\\repos\\Shopify\\Shopify.Presentation\\Program.cs",
               "RelativeToolTip": "Shopify.Presentation\\Program.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwCAAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA8AAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T22:02:36.88Z",
+              "WhenOpened": "2025-09-16T20:21:39.322Z",
               "EditorCaption": ""
             }
           ]
