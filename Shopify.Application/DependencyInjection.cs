@@ -1,4 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Shopify.Application.Services;
+using System.Reflection;
 
 namespace Shopify.Application
 {
@@ -8,7 +10,7 @@ namespace Shopify.Application
         {
             // Add application services here, e.g.:
             // services.AddTransient<IMyService, MyService>();
-
+            services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
             return services;
         }
     }

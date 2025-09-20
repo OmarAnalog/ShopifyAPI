@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using MediatR;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Shopify.Application.Products.Queries.Products;
 using Shopify.Infrastructure.Persistence;
 
 namespace Shopify.Presentation.Controllers
@@ -8,27 +10,22 @@ namespace Shopify.Presentation.Controllers
     [Route("api/Products")]
     public class ProductsController : ControllerBase
     {
-        private readonly ShopifyDbContext _dbContext;
+        private readonly ISender _mediatR;
 
-        public ProductsController(ShopifyDbContext dbContext)
+        public ProductsController(ISender mediatr)
         {
-            _dbContext = dbContext;
+            _mediatR = mediatr;
         }
         [HttpGet]
         public async Task<IActionResult> GetProducts()
         {
-            var products =  await _dbContext.Products.AsNoTracking().ToListAsync();
+            var products =  await _mediatR.Send(new GetProductsQuery());
             return Ok(products);
         }
         [HttpGet("{id}")]
         public async Task<IActionResult> GetProductAsync(int id)
         {
-            var product = await _dbContext.Products.AsNoTracking().FirstOrDefaultAsync(p => p.Id == id);
-            if (product == null)
-            {
-                return NotFound();
-            }
-            return Ok(product);
+            return Ok();
         }
     }
 }

@@ -1,8 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Shopify.Application.Services;
+using Shopify.Domain.Repositories;
+using Shopify.Infrastructure.ExternalClients;
 using Shopify.Infrastructure.Persistence;
 using Shopify.Infrastructure.Persistence.Configurations;
+using Shopify.Infrastructure.Persistence.Repositories;
 using System;
 
 namespace Shopify.Infrastructure
@@ -17,7 +21,8 @@ namespace Shopify.Infrastructure
 
             services.AddDbContext<ShopifyDbContext>(options =>
                 options.UseNpgsql(conn, npgsql => npgsql.EnableRetryOnFailure()));
-
+            services.AddScoped<IRepositoryManager, RepositoryManager>();
+            services.AddScoped<IPaymentService, PaymentService>();
             return services;
         }
     }

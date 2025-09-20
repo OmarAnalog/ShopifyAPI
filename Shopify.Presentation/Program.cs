@@ -1,4 +1,5 @@
 
+using Serilog;
 using Shopify.Application;
 using Shopify.Infrastructure;
 
@@ -12,13 +13,10 @@ namespace Shopify.Presentation
             {
                 builder.Services
                     .AddApplication()
-                    .AddInfrastructure(builder.Configuration);
-                builder.Services.AddControllers();
-                builder.Services.AddEndpointsApiExplorer();
-                builder.Services.AddSwaggerGen();
+                    .AddInfrastructure(builder.Configuration)
+                    .AddPresentation(builder.Configuration);
+                builder.Host.UseSerilog();
             }
-
-
             var app = builder.Build();
             {
                 // Configure the HTTP request pipeline.

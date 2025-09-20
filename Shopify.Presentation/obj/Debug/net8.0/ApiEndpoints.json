@@ -36,6 +36,38 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Shopify.Presentation.Controllers.OrdersController",
+    "Method": "CreateOrderAsync",
+    "RelativePath": "Orders",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "order",
+        "Type": "Shopify.Application.Orders.Dtos.CreateOrderDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shopify.Presentation.Controllers.OrdersController",
+    "Method": "GetOrderByIdAsync",
+    "RelativePath": "Orders/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Shopify.Presentation.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "WTOAsQm53yw=",
+  "dgSpecHash": "5/GK/3p0X8k=",
   "success": true,
   "projectFilePath": "C:\\Users\\EG\\source\\repos\\Shopify\\Shopify.Infrastructure\\Shopify.Infrastructure.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\EG\\.nuget\\packages\\fluentvalidation\\12.0.0\\fluentvalidation.12.0.0.nupkg.sha512",
+    "C:\\Users\\EG\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\12.0.0\\fluentvalidation.dependencyinjectionextensions.12.0.0.nupkg.sha512",
     "C:\\Users\\EG\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\EG\\.nuget\\packages\\mediatr\\13.0.0\\mediatr.13.0.0.nupkg.sha512",
     "C:\\Users\\EG\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
