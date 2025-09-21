@@ -18,8 +18,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Products\Commands\" />
-    <Folder Include="Products\Common\" />
+    <Folder Include="UseCases\Authentication\Common\" />
+    <Folder Include="UseCases\Products\Commands\" />
+    <Folder Include="UseCases\Products\Common\" />
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,44 @@
+[2025-09-21 03:24:35 INF] User profile is available. Using 'C:\Users\EG\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2025-09-21 03:24:36 INF] Now listening on: https://localhost:7292
+[2025-09-21 03:24:36 INF] Now listening on: http://localhost:5064
+[2025-09-21 03:24:36 INF] Application started. Press Ctrl+C to shut down.
+[2025-09-21 03:24:36 INF] Hosting environment: Development
+[2025-09-21 03:24:36 INF] Content root path: C:\Users\EG\source\repos\Shopify\Shopify.Presentation
+[2025-09-21 03:24:38 INF] Request starting HTTP/2 GET https://localhost:7292/swagger/index.html - null null
+[2025-09-21 03:24:40 INF] Request finished HTTP/2 GET https://localhost:7292/swagger/index.html - 200 null text/html;charset=utf-8 2082.5179ms
+[2025-09-21 03:24:40 INF] Request starting HTTP/2 GET https://localhost:7292/_framework/aspnetcore-browser-refresh.js - null null
+[2025-09-21 03:24:40 INF] Request finished HTTP/2 GET https://localhost:7292/_framework/aspnetcore-browser-refresh.js - 200 13776 application/javascript; charset=utf-8 28.5953ms
+[2025-09-21 03:24:40 INF] Request starting HTTP/2 GET https://localhost:7292/_vs/browserLink - null null
+[2025-09-21 03:24:41 INF] Request finished HTTP/2 GET https://localhost:7292/_vs/browserLink - 200 null text/javascript; charset=UTF-8 150.1043ms
+[2025-09-21 03:24:41 INF] Request starting HTTP/2 GET https://localhost:7292/swagger/v1/swagger.json - null null
+[2025-09-21 03:24:42 INF] Request finished HTTP/2 GET https://localhost:7292/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 375.3575ms
+[2025-09-21 03:25:12 INF] Request starting HTTP/2 POST https://localhost:7292/api/auth/register - application/json 156
+[2025-09-21 03:25:12 INF] CORS policy execution successful.
+[2025-09-21 03:25:12 INF] Executing endpoint 'Shopify.Presentation.Controllers.AuthenticationController.RegisterAsync (Shopify.Presentation)'
+[2025-09-21 03:25:12 INF] Route matched with {action = "Register", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterAsync(Shopify.Domain.Dtos.Authentication.RegisterDto) on controller Shopify.Presentation.Controllers.AuthenticationController (Shopify.Presentation).
+[2025-09-21 03:25:12 WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+[2025-09-21 03:25:13 INF] Executing action method Shopify.Presentation.Controllers.AuthenticationController.RegisterAsync (Shopify.Presentation) - Validation state: "Valid"
+[2025-09-21 03:25:16 INF] Executed DbCommand (112ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+[2025-09-21 03:25:16 INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+[2025-09-21 03:25:17 INF] Executed DbCommand (7ms) [Parameters=[@p0='?', @p1='?' (DbType = Int32), @p2='?', @p3='?', @p4='?' (DbType = Boolean), @p5='?', @p6='?', @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTime), @p9='?', @p10='?', @p11='?', @p12='?', @p13='?' (DbType = Boolean), @p14='?', @p15='?' (DbType = Boolean), @p16='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AspNetUsers" ("Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "FirstName", "LastName", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16);
+[2025-09-21 03:25:17 INF] Executed DbCommand (9ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a0."Name"
+FROM "AspNetUserRoles" AS a
+INNER JOIN "AspNetRoles" AS a0 ON a."RoleId" = a0."Id"
+WHERE a."UserId" = @__userId_0
+[2025-09-21 03:25:17 INF] User registered successfully: OmarA
+[2025-09-21 03:25:17 INF] Executed action method Shopify.Presentation.Controllers.AuthenticationController.RegisterAsync (Shopify.Presentation), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 4455.5179ms.
+[2025-09-21 03:25:17 INF] Executing OkObjectResult, writing value of type 'Shopify.Domain.Dtos.Authentication.AuthResult'.
+[2025-09-21 03:25:17 INF] Executed action Shopify.Presentation.Controllers.AuthenticationController.RegisterAsync (Shopify.Presentation) in 4548.1228ms
+[2025-09-21 03:25:17 INF] Executed endpoint 'Shopify.Presentation.Controllers.AuthenticationController.RegisterAsync (Shopify.Presentation)'
+[2025-09-21 03:25:17 INF] Request finished HTTP/2 POST https://localhost:7292/api/auth/register - 200 null application/json; charset=utf-8 4757.2814ms

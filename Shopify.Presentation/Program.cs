@@ -14,7 +14,9 @@ namespace Shopify.Presentation
                 builder.Services
                     .AddApplication()
                     .AddInfrastructure(builder.Configuration)
-                    .AddPresentation(builder.Configuration);
+                    .AddPresentation(builder.Configuration)
+                    .ConfigureIdentity(builder.Configuration)
+                    .ConfigureJwt(builder.Configuration);
                 builder.Host.UseSerilog();
             }
             var app = builder.Build();
@@ -29,8 +31,9 @@ namespace Shopify.Presentation
 
                 app.UseHttpsRedirection();
                 app.UseRouting();
+                app.UseCors("CorsPolicy");
+                app.UseAuthentication();
                 app.UseAuthorization();
-
 
                 app.MapControllers();
 

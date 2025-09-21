@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Shopify.Application.Products.Queries.Products;
+using Shopify.Application.UseCases.Products.Queries.Products;
 using Shopify.Infrastructure.Persistence;
 
 namespace Shopify.Presentation.Controllers

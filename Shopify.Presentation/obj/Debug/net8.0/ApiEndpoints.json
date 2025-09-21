@@ -1,5 +1,31 @@
 [
   {
+    "ContainingType": "Shopify.Presentation.Controllers.AuthenticationController",
+    "Method": "Login",
+    "RelativePath": "api/auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shopify.Presentation.Controllers.AuthenticationController",
+    "Method": "RegisterAsync",
+    "RelativePath": "api/auth/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Shopify.Domain.Dtos.Authentication.RegisterDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Shopify.Presentation.Controllers.ProductsController",
     "Method": "GetProducts",
     "RelativePath": "api/Products",
@@ -45,7 +71,7 @@
     "Parameters": [
       {
         "Name": "order",
-        "Type": "Shopify.Application.Orders.Dtos.CreateOrderDto",
+        "Type": "Shopify.Application.UseCases.Orders.Dtos.CreateOrderDto",
         "IsRequired": true
       }
     ],
@@ -66,26 +92,5 @@
       }
     ],
     "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Shopify.Presentation.Controllers.WeatherForecastController",
-    "Method": "Get",
-    "RelativePath": "WeatherForecast",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Shopify.Presentation.WeatherForecast, Shopify.Presentation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ],
-    "EndpointName": "GetWeatherForecast"
   }
 ]

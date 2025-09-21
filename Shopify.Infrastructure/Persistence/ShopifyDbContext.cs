@@ -1,9 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Shopify.Domain.Entities;
+using Shopify.Infrastructure.Identity;
 
 namespace Shopify.Infrastructure.Persistence
 {
-    public class ShopifyDbContext : DbContext
+    public class ShopifyDbContext : IdentityDbContext<User>
     {
         public ShopifyDbContext(DbContextOptions<ShopifyDbContext> options) : base(options)
         {
@@ -14,7 +16,6 @@ namespace Shopify.Infrastructure.Persistence
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            // add configuration for product from class product configuration
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(ShopifyDbContext).Assembly);
 
         }

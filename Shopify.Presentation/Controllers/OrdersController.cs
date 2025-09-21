@@ -1,8 +1,8 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Shopify.Application.Orders.Commands.OrderCreation;
-using Shopify.Application.Orders.Dtos;
-using Shopify.Application.Orders.Queries.OrderQuery;
+using Shopify.Application.UseCases.Orders.Commands.OrderCreation;
+using Shopify.Application.UseCases.Orders.Queries.OrderQuery;
+using Shopify.Application.UseCases.Orders.Dtos;
 
 namespace Shopify.Presentation.Controllers
 {

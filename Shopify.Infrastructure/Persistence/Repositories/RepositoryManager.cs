@@ -1,5 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore.Storage;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore.Storage;
+using Shopify.Application.Services;
 using Shopify.Domain.Repositories;
+using Shopify.Infrastructure.Identity;
 
 namespace Shopify.Infrastructure.Persistence.Repositories
 {
@@ -9,14 +12,19 @@ namespace Shopify.Infrastructure.Persistence.Repositories
         private readonly Lazy<IOrderRepository> orderRepository;
         private readonly ShopifyDbContext _dbContext;
         private IDbContextTransaction? _dbContextTransaction;
-        public RepositoryManager(ShopifyDbContext dbContext)
+        private readonly Lazy<IAuthenticationRepository> authenticationRepository;
+        public RepositoryManager(ShopifyDbContext dbContext,UserManager<User> userManager,ITokenService tokenService)
         {
             _dbContext = dbContext;
             productRepository = new Lazy<IProductRepository>(() => new ProductRepository(_dbContext));
             orderRepository = new Lazy<IOrderRepository>(() => new OrderRepository(_dbContext));
+            authenticationRepository = new Lazy<IAuthenticationRepository>(() => new AuthenticationRepository(userManager,tokenService));
         }
         public IProductRepository ProductRepository => productRepository.Value;
-        public IOrderRepository OrderRepository => orderRepository.Value; 
+        public IOrderRepository OrderRepository => orderRepository.Value;
+
+        public IAuthenticationRepository AuthenticationRepository => authenticationRepository.Value;
+
         public async Task BeginTransaction()
         {
             if (_dbContextTransaction != null)
