@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Shopify.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e6956b0a5c03f24695d09a78a3356442396d0a96")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+538cf7a720ef4f3519bd39d6bac4ce44e9d2ad01")]
 [assembly: System.Reflection.AssemblyProductAttribute("Shopify.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Shopify.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

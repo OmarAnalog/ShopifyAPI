@@ -4,6 +4,7 @@
 #nullable enable
 
 using System.Diagnostics;
+using ErrorOr;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
@@ -109,7 +110,11 @@ public sealed class ShopifyProblemDetailsFactory : ProblemDetailsFactory
         {
             problemDetails.Extensions["traceId"] = traceId;
         }
-        problemDetails.Extensions.Add("Just Trying", "Hello Shopify");
+        var errors = httpContext?.Items["errors"] as List<Error>;
+        if (errors is not null)
+        {
+            problemDetails.Extensions.Add("errors", errors.Select(e=>e.Code));
+        }
         _configure?.Invoke(new() { HttpContext = httpContext!, ProblemDetails = problemDetails });
     }
 }

@@ -30,6 +30,26 @@
           "Shopify.Presentation.dll": {}
         }
       },
+      "ErrorOr/2.0.1": {
+        "runtime": {
+          "lib/net6.0/ErrorOr.dll": {
+            "assemblyVersion": "2.0.1.0",
+            "fileVersion": "2.0.1.0"
+          }
+        }
+      },
+      "FluentResults/4.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.2",
+          "System.Threading.Tasks.Extensions": "4.5.4"
+        },
+        "runtime": {
+          "lib/net8.0/FluentResults.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          }
+        }
+      },
       "FluentValidation/12.0.0": {
         "runtime": {
           "lib/net8.0/FluentValidation.dll": {
@@ -829,6 +849,14 @@
           }
         }
       },
+      "OneOf/3.0.271": {
+        "runtime": {
+          "lib/netstandard2.0/OneOf.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "OpenTelemetry/1.9.0": {
         "dependencies": {
           "Microsoft.Extensions.Diagnostics.Abstractions": "8.0.1",
@@ -1231,6 +1259,7 @@
       },
       "System.Text.Encodings.Web/8.0.0": {},
       "System.Threading.Channels/6.0.0": {},
+      "System.Threading.Tasks.Extensions/4.5.4": {},
       "Shopify.Application/1.0.0": {
         "dependencies": {
           "FluentValidation": "12.0.0",
@@ -1248,7 +1277,10 @@
       },
       "Shopify.Domain/1.0.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.20"
+          "ErrorOr": "2.0.1",
+          "FluentResults": "4.0.0",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.20",
+          "OneOf": "3.0.271"
         },
         "runtime": {
           "Shopify.Domain.dll": {
@@ -1281,6 +1313,20 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "ErrorOr/2.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-aje9lUVEAsusPFmaRcVM5EUqWBofd7hYtb9N8+ycgPYrtOzyFajMpzRgIO4uuiCllNLBc3x48+cpA+4v4koUDQ==",
+      "path": "erroror/2.0.1",
+      "hashPath": "erroror.2.0.1.nupkg.sha512"
+    },
+    "FluentResults/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wKfdLvDnDVhXlSreU7u/NFNHH6EfoOhAloEID4ePAyk+ZliowKZJvX+aCL4hxhFc9Jj74t62amS4LyOYTjXGCg==",
+      "path": "fluentresults/4.0.0",
+      "hashPath": "fluentresults.4.0.0.nupkg.sha512"
     },
     "FluentValidation/12.0.0": {
       "type": "package",
@@ -1765,6 +1811,13 @@
       "path": "npgsql.entityframeworkcore.postgresql/8.0.11",
       "hashPath": "npgsql.entityframeworkcore.postgresql.8.0.11.nupkg.sha512"
     },
+    "OneOf/3.0.271": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pqpqeK8xQGggExhr4tesVgJkjdn+9HQAO0QgrYV2hFjE3y90okzk1kQMntMiUOGfV7FrCUfKPaVvPBD4IANqKg==",
+      "path": "oneof/3.0.271",
+      "hashPath": "oneof.3.0.271.nupkg.sha512"
+    },
     "OpenTelemetry/1.9.0": {
       "type": "package",
       "serviceable": true,
@@ -2072,6 +2125,13 @@
       "sha512": "sha512-TY8/9+tI0mNaUMgntOxxaq2ndTkdXqLSxvPmas7XEqOlv9lQtB7wLjYGd756lOaO7Dvb5r/WXhluM+0Xe87v5Q==",
       "path": "system.threading.channels/6.0.0",
       "hashPath": "system.threading.channels.6.0.0.nupkg.sha512"
+    },
+    "System.Threading.Tasks.Extensions/4.5.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zteT+G8xuGu6mS+mzDzYXbzS7rd3K6Fjb9RiZlYlJPam2/hU7JCBZBVEcywNuR+oZ1ncTvc/cq0faRr3P01OVg==",
+      "path": "system.threading.tasks.extensions/4.5.4",
+      "hashPath": "system.threading.tasks.extensions.4.5.4.nupkg.sha512"
     },
     "Shopify.Application/1.0.0": {
       "type": "project",

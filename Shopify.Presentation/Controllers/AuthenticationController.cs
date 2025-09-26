@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using ErrorOr;
+using MediatR;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Shopify.Application.Services;
@@ -9,8 +10,7 @@ using Shopify.Presentation.Services.JwtService;
 namespace Shopify.Presentation.Controllers
 {
     [Route("api/auth")]
-    [ApiController]
-    public class AuthenticationController:ControllerBase
+    public class AuthenticationController:ApiController
     {
         private readonly ISender _mediatr;
 
@@ -30,10 +30,18 @@ namespace Shopify.Presentation.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> RegisterAsync([FromBody] RegisterDto request)
         {
-            var command = new RegisterCommand(request.FirstName,request.LastName,request.UserName,request.Email,request.Password,request.Roles);
-            var authResponse = await _mediatr.Send(command);
+            var command = new RegisterCommand(request.FirstName,
+                                              request.LastName,
+                                              request.UserName,
+                                              request.Email,
+                                              request.Password,
+                                              request.Roles);
+            ErrorOr<AuthResult> authResponse = await _mediatr.Send(command);
             // Placeholder for register logic
-            return Ok(authResponse);
+            return authResponse.Match(
+                authResult => Ok(authResult),
+                errors => Problem(errors)
+            );
         }
     }
 }

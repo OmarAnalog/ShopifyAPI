@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using ErrorOr;
+using Microsoft.AspNetCore.Identity;
 using Shopify.Application.Services;
+using Shopify.Domain.Common.Errors;
 using Shopify.Domain.Dtos.Authentication;
 using Shopify.Domain.Entities.Identity;
 using Shopify.Domain.Repositories;
@@ -37,8 +39,16 @@ namespace Shopify.Infrastructure.Persistence.Repositories
             };
         }
 
-        public async Task<AuthResult> Register(RegisterDto registerDto)
+        public async Task<ErrorOr<AuthResult>> Register(RegisterDto registerDto)
         {
+            if (await _userManager.FindByEmailAsync(registerDto.Email) != null)
+            {
+                return Errors.User.DuplicateEmail;
+            }
+            if (await _userManager.FindByNameAsync(registerDto.UserName) != null)
+            {
+                return Errors.User.DuplicateEmail;
+            }
             var user = new User
             {
                 UserName = registerDto.UserName,

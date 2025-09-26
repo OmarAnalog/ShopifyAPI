@@ -1,10 +1,11 @@
-﻿using MediatR;
+﻿using ErrorOr;
+using MediatR;
 using Shopify.Domain.Dtos.Authentication;
 
 namespace Shopify.Application.UseCases.Authentication.Commands.Register
 {
     public record RegisterCommand(string FirstName, string LastName, string UserName, string Email, string Password, IEnumerable<string>? Roles)
-        : IRequest<AuthResult>
+        : IRequest<ErrorOr<AuthResult>>
     {
         public static RegisterCommand Create(RegisterDto request)
         {
