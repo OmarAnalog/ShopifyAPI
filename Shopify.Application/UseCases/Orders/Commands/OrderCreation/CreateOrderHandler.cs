@@ -29,7 +29,7 @@ namespace Shopify.Application.UseCases.Orders.Commands.OrderCreation
             // first create order
             var order = new Order()
             {
-                CustomerId = request.OrderDto.CustomerId,
+                UserId = request.OrderDto.UserId,
                 TotalAmount = 0,
             };
             await CalcOrderItems(request, order);
@@ -38,7 +38,7 @@ namespace Shopify.Application.UseCases.Orders.Commands.OrderCreation
             if (!paymentResult.Success)
             {
                 _logger.LogWarning("Payment failed for Customer {CustomerId}: {Message}",
-                                   order.CustomerId, paymentResult.Message);
+                                   order.UserId, paymentResult.Message);
             }
 
             await _repositoryManager.BeginTransaction();
@@ -56,7 +56,7 @@ namespace Shopify.Application.UseCases.Orders.Commands.OrderCreation
             }
             _logger.LogInformation("Order {OrderId} created " +
                 "successfully for Customer {CustomerId} with Total Amount {TotalAmount}",
-                                   order.Id, order.CustomerId, order.TotalAmount);
+                                   order.Id, order.UserId, order.TotalAmount);
             return order.Id;
         }
 

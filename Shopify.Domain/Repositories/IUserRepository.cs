@@ -2,7 +2,7 @@
 
 namespace Shopify.Domain.Repositories
 {
-    public interface IAuthenticationRepository
+    public interface IUserRepository
     {
         Task<AuthResult> Register(RegisterDto registerDto);
         Task<AuthResult> Login(string email, string password);

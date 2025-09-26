@@ -4,7 +4,7 @@
     {
         IProductRepository ProductRepository { get; }
         IOrderRepository OrderRepository { get; }
-        IAuthenticationRepository AuthenticationRepository { get; }
+        IUserRepository UserRepository { get; }
         Task BeginTransaction();
         Task CommitTransaction();
         Task RollbackTransaction();

@@ -15,7 +15,7 @@ namespace Shopify.Application.UseCases.Authentication.Queries.Login
 
         public Task<AuthResult> Handle(LoginQuery request, CancellationToken cancellationToken)
         {
-            var authResult = _repositoryManager.AuthenticationRepository.Login(request.Email, request.Password);
+            var authResult = _repositoryManager.UserRepository.Login(request.Email, request.Password);
             if (authResult == null)
             {
                 throw new Exception("Invalid email or password");

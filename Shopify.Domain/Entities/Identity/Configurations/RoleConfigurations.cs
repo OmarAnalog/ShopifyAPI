@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Shopify.Infrastructure.Identity.Configurations
+namespace Shopify.Domain.Entities.Identity.Configurations
 {
     internal class RoleConfigurations : IEntityTypeConfiguration<IdentityRole>
     {

@@ -14,17 +14,16 @@ namespace Shopify.Presentation
                 builder.Services
                     .AddApplication()
                     .AddInfrastructure(builder.Configuration)
-                    .AddPresentation(builder.Configuration)
-                    .ConfigureIdentity(builder.Configuration)
-                    .ConfigureJwt(builder.Configuration);
+                    .AddPresentation(builder.Configuration);
                 builder.Host.UseSerilog();
             }
             var app = builder.Build();
             {
                 // Configure the HTTP request pipeline.
+                app.UseExceptionHandler("/error");
                 if (app.Environment.IsDevelopment())
                 {
-                    app.UseDeveloperExceptionPage();
+                    //app.UseDeveloperExceptionPage();
                     app.UseSwagger();
                     app.UseSwaggerUI();
                 }

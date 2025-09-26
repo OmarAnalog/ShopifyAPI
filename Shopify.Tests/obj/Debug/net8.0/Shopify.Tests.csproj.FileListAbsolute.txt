@@ -123,3 +123,14 @@ C:\Users\EG\source\repos\Shopify\Shopify.Tests\bin\Debug\net8.0\runtimes\win\lib
 C:\Users\EG\source\repos\Shopify\Shopify.Tests\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.dll
 C:\Users\EG\source\repos\Shopify\Shopify.Tests\obj\Debug\net8.0\Shopify.Tests.genruntimeconfig.cache
 C:\Users\EG\source\repos\Shopify\Shopify.Tests\bin\Debug\net8.0\xunit.runner.visualstudio.testadapter.dll
+C:\Users\EG\source\repos\Shopify\Shopify.Tests\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\EG\source\repos\Shopify\Shopify.Tests\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\EG\source\repos\Shopify\Shopify.Tests\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\EG\source\repos\Shopify\Shopify.Tests\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\EG\source\repos\Shopify\Shopify.Tests\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\EG\source\repos\Shopify\Shopify.Tests\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\EG\source\repos\Shopify\Shopify.Tests\bin\Debug\net8.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\EG\source\repos\Shopify\Shopify.Tests\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\EG\source\repos\Shopify\Shopify.Tests\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\EG\source\repos\Shopify\Shopify.Tests\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\EG\source\repos\Shopify\Shopify.Tests\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll

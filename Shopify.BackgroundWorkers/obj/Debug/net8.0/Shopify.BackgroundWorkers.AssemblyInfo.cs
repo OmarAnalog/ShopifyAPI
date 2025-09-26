@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Shopify.BackgroundWorkers")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7ddf7294f8abb2152e302be0d0fce347a02f384c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e6956b0a5c03f24695d09a78a3356442396d0a96")]
 [assembly: System.Reflection.AssemblyProductAttribute("Shopify.BackgroundWorkers")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Shopify.BackgroundWorkers")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

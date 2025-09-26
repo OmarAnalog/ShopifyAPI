@@ -27,7 +27,7 @@ namespace Shopify.Application.UseCases.Authentication.Commands.Register
                 Password = request.Password,
                 Roles = request.Roles
             };
-            var authResult = await _repositoryManager.AuthenticationRepository.Register(registerDto);
+            var authResult = await _repositoryManager.UserRepository.Register(registerDto);
             if (authResult == null)
             {
                 _logger.LogError("User registration failed for {UserName}", request.UserName);

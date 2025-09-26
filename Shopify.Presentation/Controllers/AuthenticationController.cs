@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Mvc;
 using Shopify.Application.Services;
 using Shopify.Application.UseCases.Authentication.Commands.Register;
 using Shopify.Domain.Dtos.Authentication;
-using Shopify.Infrastructure.Identity;
 using Shopify.Presentation.Services.JwtService;
 
 namespace Shopify.Presentation.Controllers

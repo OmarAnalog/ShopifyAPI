@@ -10,3 +10,4 @@ C:\Users\EG\source\repos\Shopify\Shopify.Domain\obj\Debug\net8.0\Shopify.Domain.
 C:\Users\EG\source\repos\Shopify\Shopify.Domain\obj\Debug\net8.0\refint\Shopify.Domain.dll
 C:\Users\EG\source\repos\Shopify\Shopify.Domain\obj\Debug\net8.0\Shopify.Domain.pdb
 C:\Users\EG\source\repos\Shopify\Shopify.Domain\obj\Debug\net8.0\ref\Shopify.Domain.dll
+C:\Users\EG\source\repos\Shopify\Shopify.Domain\obj\Debug\net8.0\Shopify.Domain.csproj.AssemblyReference.cache

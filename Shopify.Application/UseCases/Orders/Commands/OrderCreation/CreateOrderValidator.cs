@@ -7,7 +7,7 @@ namespace Shopify.Application.UseCases.Orders.Commands.OrderCreation
     {
         public CreateOrderValidator()
         {
-            RuleFor(x => x.CustomerId).NotEmpty();
+            RuleFor(x => x.UserId).NotEmpty();
             RuleFor(x => x.OrderItems).NotEmpty();
             RuleForEach(x => x.OrderItems).ChildRules(i =>
             {

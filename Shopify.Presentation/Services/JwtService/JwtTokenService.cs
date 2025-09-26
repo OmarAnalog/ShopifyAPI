@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Shopify.Application.Services;
-using Shopify.Infrastructure.Identity;
+using Shopify.Domain.Entities.Identity;
 using Shopify.Presentation.Services.JwtService.Helpers;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;

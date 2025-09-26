@@ -1,12 +1,12 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Shopify.Application.Services;
 using Shopify.Domain.Dtos.Authentication;
+using Shopify.Domain.Entities.Identity;
 using Shopify.Domain.Repositories;
-using Shopify.Infrastructure.Identity;
 
 namespace Shopify.Infrastructure.Persistence.Repositories
 {
-    public class AuthenticationRepository : IAuthenticationRepository
+    public class AuthenticationRepository : IUserRepository
     {
         private readonly UserManager<User> _userManager;
         private readonly ITokenService _tokenService;
@@ -16,17 +16,17 @@ namespace Shopify.Infrastructure.Persistence.Repositories
             _tokenService = tokenService;
         }
 
-        public async Task<AuthResult?> Login(string email, string password)
+        public async Task<AuthResult> Login(string email, string password)
         {
             var user = await _userManager.FindByEmailAsync(email);
             if (user == null)
             {
-                return null;
+                throw new Exception("User not found");
             }
             var isPasswordValid = await _userManager.CheckPasswordAsync(user, password);
             if (!isPasswordValid)
             {
-                return null;
+                throw new Exception("InvalidCreadentials");
             }
             return new AuthResult
             {
@@ -37,7 +37,7 @@ namespace Shopify.Infrastructure.Persistence.Repositories
             };
         }
 
-        public async Task<AuthResult?> Register(RegisterDto registerDto)
+        public async Task<AuthResult> Register(RegisterDto registerDto)
         {
             var user = new User
             {
@@ -58,7 +58,7 @@ namespace Shopify.Infrastructure.Persistence.Repositories
                     Token = await _tokenService.CreateTokenAsync(user.Id)
                 };
             }
-            return null;
+            throw new Exception(string.Join(", ", result.Errors.Select(e => e.Description)));// we can create custom exception here
         }
     }
 }

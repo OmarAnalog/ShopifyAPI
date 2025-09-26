@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Shopify.Domain.Entities;
-using Shopify.Infrastructure.Identity;
+using Shopify.Domain.Entities.Identity;
 
 namespace Shopify.Infrastructure.Persistence
 {

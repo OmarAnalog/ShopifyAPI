@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Shopify.Presentation.Services.JwtService.Helpers;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
+using Shopify.Presentation.Errors;
 namespace Shopify.Presentation
 {
     public static class DependencyInjection
@@ -36,7 +38,10 @@ namespace Shopify.Presentation
                 .CreateLogger();
             services.AddOpenTelemetry().WithTracing(b => 
                 {
-                    b.AddAspNetCoreInstrumentation();
+                    b.AddAspNetCoreInstrumentation(opt =>
+                    {
+                        opt.RecordException = true;
+                    });
                     b.AddHttpClientInstrumentation();
                     b.AddConsoleExporter();
                     b.AddEntityFrameworkCoreInstrumentation(opt =>
@@ -46,6 +51,8 @@ namespace Shopify.Presentation
                 }
             );
             services.AddScoped<ITokenService, JwtTokenService>();
+            services.ConfigureJwt(configuration);
+            services.AddSingleton<ProblemDetailsFactory, ShopifyProblemDetailsFactory>();
             return services;
         }
         public static IServiceCollection ConfigureJwt(this IServiceCollection services, IConfiguration configuration)

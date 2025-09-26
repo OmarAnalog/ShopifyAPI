@@ -5,12 +5,12 @@ using Microsoft.Extensions.DependencyInjection;
 using Shopify.Application.Services;
 using Shopify.Domain.Repositories;
 using Shopify.Infrastructure.ExternalClients;
-using Shopify.Infrastructure.Identity;
 using Shopify.Infrastructure.Persistence;
 using Shopify.Infrastructure.Persistence.Configurations;
 using Shopify.Infrastructure.Persistence.Repositories;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using System;
+using Shopify.Domain.Entities.Identity;
 
 namespace Shopify.Infrastructure
 {
@@ -26,7 +26,7 @@ namespace Shopify.Infrastructure
                 options.UseNpgsql(conn, npgsql => npgsql.EnableRetryOnFailure()));
             services.AddScoped<IRepositoryManager, RepositoryManager>();
             services.AddScoped<IPaymentService, PaymentService>();
-
+            services.ConfigureIdentity(configuration);
             return services;
         }
         public static IServiceCollection ConfigureIdentity(this IServiceCollection services, IConfiguration configuration)

@@ -52,6 +52,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Shopify.Presentation.Controllers.ErrorController",
+    "Method": "Error",
+    "RelativePath": "error",
+    "HttpMethod": "",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Shopify.Presentation.Controllers.HealthController",
     "Method": "Get",
     "RelativePath": "Health",

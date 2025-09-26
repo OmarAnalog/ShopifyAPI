@@ -1,7 +1,7 @@
 ﻿namespace Shopify.Application.UseCases.Orders.Dtos
 {
     public record CreateOrderDto
-    (string CustomerId,
+    (string UserId,
     List<OrderItemDto> OrderItems,
     PaymentDto Payment);
     public record OrderItemDto(int ProductId, int Quantity);
